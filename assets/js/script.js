@@ -1,105 +1,60 @@
+var schedNum = 0;
+const wholeSched = {};
 
-//make tasks
+//TODO fix this so it places remembered tasks in right slots!!!
+//replace tasks
+var replaceTasks = function () {
+    var x = 0
+    var previouslyOn = JSON.parse(localStorage.getItem("oldSched"));
+    previouslyOnLength = Object.keys(previouslyOn).length
+    console.log(previouslyOnLength);
+    $(".hour").each(function () {
+        var oldTaskTime = (previouslyOn[x][0]);
+        var oldTask = (previouslyOn[x][1]);
+        var calendarSlot = $(".hour").text();
+        if (oldTaskTime = calendarSlot) {
+            var write = $("<textarea>").addClass("textareaB").addClass("toDoMade").val(oldTask).wrapInner("p");
+            $(this).siblings(".todo").append(write);
+        };
+        // return(!(x<previouslyOnLength));
+        x++;
+    });
+};
+
+//
+// make tasks
 $(".todo").click(function () {
-    var write = $("<textarea>").addClass("textarea").addClass("toDoMade").val("").wrapInner("p");
+    var write = $("<textarea>").addClass("textareaB").addClass("toDoMade").val("").wrapInner("p");
     $(this).append(write);
     write.trigger("focus");
     $(this).siblings(".saveBtn").addClass("bg-danger");
 });
 
-
-
-//edit tasks
-$(".toDoMade").click(function () {
-    var write = $("<textarea>").addClass("toDoMade").val("").wrapInner("p");
-    $(this).replaceWith(write);
-    write.trigger("focus");
-    $(this).siblings(".saveBtn").addClass("bg-danger");
-});
-
+//TODO use place 
 //save tasks
 $(".saveBtn").click(function () {
     $(this).removeClass("bg-danger");
-    var hourItems = $(this).siblings(".todo").children(".toDoMade").length;
+    // var hourItems = $(this).siblings(".todo").children(".toDoMade").length;
     var schedTime = $(this).siblings(".hour").text();
-    var schedItems = $(this).siblings(".todo").children(".toDoMade").each.val();
-    var schedHour = [schedTime, schedItems];
-    localStorage.setItem("oldSched", JSON.stringify(schedHour));
-
+    var schedItems = $(this).siblings(".todo").children(".toDoMade").val();
+    wholeSched[schedNum] = [schedTime, schedItems];
+    schedNum++;
+    localStorage.setItem("oldSched", JSON.stringify(wholeSched));
 });
 
-//retrieve oldSched and put it on the slate
+replaceTasks();
 
 
-// $(".todo").on("click", "div", function() {
-//     console.log("click");
-
-
-// });
-
-
-// var sched = [];
-// var theSched = document.getElementById('theDay');
-
-
-
-// var makeToDo = function () {
-//     var toDoTime = $(this).siblings("#time").string;
-//     var toDoThing = $(this).siblings("#todo").string;
-//     console.log("New To Do", toDoTime, toDoThing);
-// };
-
-// var clicker = function () {
-//     console.log("click");
-// };
-
-
-
-
-
-// var writeToDo = function () {
-//     var typeField = document.createElement("input", "type: 'text'");
-//     typeField.setAttribute("class", "textarea");
-//     $(this)div.appendChild(typeField);
-//     $(this).siblings(".saveBtn").on("click", makeToDo);
-// };
-
-// theSched.addEventListener("click");
-
-
-
-//design the layout
-//make text fields editable
-//save text fields in local storage and div
-//get current date
-//display date in header
-//adjust background to reflect current date
-
-// const dateTime = Temporal.Now.plainDateTimeISO();
-// dateTime.toString();
-
-
-
-// var loadSched = function() {
-//     oldSched = JSON.parse(localStorage.getItem("savedSched"))
-//     if (!savedSched) {
-
-//     } else {
-//        for (let i=0; i > oldSched.length, i++) {
-
-//        }
-//     };
-// };
-
-// var saveSched = function() {
-
-// }
-
-
-// 
-
-// replace p element with a new textarea
-
-
-// var textInput = $("<textarea>").addClass("textarea").val(text);
-// $(this).replaceWith(textInput);
+var replaceTasks = function () {
+    var x = 0
+    var previouslyOn = JSON.parse(localStorage.getItem("oldSched"));
+    previouslyOnLength = Object.keys(previouslyOn).length
+    console.log(previouslyOnLength);
+    var oldTaskTime = (previouslyOn[x][0]);
+    var oldTask = (previouslyOn[x][1]);
+    jQuery.each(function( previouslyOnLength, oldTaskTime ) {
+        var write = $("<textarea>").addClass("textareaB").addClass("toDoMade").val(oldTask).wrapInner("p");
+        $("#" + oldTaskTime).siblings(".todo").append(write);
+    });
+    x++
+};
