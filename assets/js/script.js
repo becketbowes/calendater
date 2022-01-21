@@ -1,6 +1,17 @@
 var schedNum = 0;
 const wholeSched = {};
 
+moment().hour();
+moment().day();
+moment().date();
+moment().month();
+moment().year();
+
+var date = moment().format("dddd, MMMM Do, YYYY");
+$(".currentDay").text(date);
+
+
+
 //TODO fix this so it places remembered tasks in right slots!!!
 //replace tasks
 var replaceTasks = function () {
