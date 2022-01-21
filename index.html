@@ -19,89 +19,84 @@
     <p class="lead">A simple calendar app for scheduling your work day</p>
     <p id="currentDay" class="lead"></p>
   </header>
-  <div class="calendater container-fluid">
-    <!-- Timeblocks go here -->
+  <!-- Timeblocks go here -->
+  <div class="container-fluid" id="theDay">
     <div class="row col-12 align-content-top">
       <div class="col-1 mt-0"></div>
       <div class="col-10 mt-0">
-        <div class="row border-top bg-light mt-0" id="slot">
-          <div class="col-1 time" id="sixAm">6am</div>
-          <div class="todo col-10">
-            <input type="text">
-          </div>
-          <div class="col-1 pt-4 pl-5 save-btn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
-        </div>
-        <div class="row border-top bg-light mt-0" id="slot">
-          <div class="col-1 time" id="sevenAm">7am</div>
+        <div class="row bg-light mt-0" id="slot">
+          <div class="col-1 time hour" id="sixAm">6am</div>
           <div class="todo col-10"></div>
-          <div class="col-1 pt-4 pl-5 save-btn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
+          <div class="col-1 pt-4 pl-5 saveBtn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
         </div>
-        <div class="row border-top bg-light mt-0" id="slot">
-          <div class="col-1 time" id="eightAm">8am</div>
+        <div class="row bg-light mt-0" id="slot">
+          <div class="col-1 time hour" id="sevenAm">7am</div>
           <div class="todo col-10"></div>
-          <div class="col-1 pt-4 pl-5 save-btn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
+          <div class="col-1 pt-4 pl-5 saveBtn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
         </div>
-        <div class="row border-top bg-light mt-0" id="slot">
-          <div class="col-1 time" id="nineAm">9am</div>
+        <div class="row bg-light mt-0" id="slot">
+          <div class="col-1 time hour" id="eightAm">8am</div>
           <div class="todo col-10"></div>
-          <div class="col-1 pt-4 pl-5 save-btn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
+          <div class="col-1 pt-4 pl-5 saveBtn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
         </div>
-        <div class="row border-top bg-light mt-0" id="slot">
-          <div class="col-1" time" id="tenAm">10am</div>
+        <div class="row bg-light mt-0" id="slot">
+          <div class="col-1 time hour" id="nineAm">9am</div>
           <div class="todo col-10"></div>
-          <div class="col-1 pt-4 pl-5 save-btn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
+          <div class="col-1 pt-4 pl-5 saveBtn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
         </div>
-        <div class="row border-top bg-light mt-0" id="slot">
-          <div class="col-1 time" id="elevenAm">11am</div>
+        <div class="row bg-light mt-0" id="slot">
+          <div class="col-1 time hour" id="tenAm">10am</div>
           <div class="todo col-10"></div>
-          <div class="col-1 pt-4 pl-5 save-btn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
+          <div class="col-1 pt-4 pl-5 saveBtn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
         </div>
-        <div class="row border-top bg-light mt-0" id="slot">
-          <div class="col-1 time" id="noon">Noon</div>
+        <div class="row bg-light mt-0" id="slot">
+          <div class="col-1 time hour" id="elevenAm">11am</div>
           <div class="todo col-10"></div>
-          <div class="col-1 pt-4 pl-5 save-btn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
+          <div class="col-1 pt-4 pl-5 saveBtn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
         </div>
-        <div class="row border-top bg-light mt-0" id="slot">
-          <div class="col-1 time" id="onePm">1pm</div>
+        <div class="row bg-light mt-0" id="slot">
+          <div class="col-1 time hour" id="noon">Noon</div>
           <div class="todo col-10"></div>
-          <div class="col-1 pt-4 pl-5 save-btn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
+          <div class="col-1 pt-4 pl-5 saveBtn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
         </div>
-        <div class="row border-top bg-light mt-0" id="slot">
-          <div class="col-1 time" id="twoPm">2pm</div>
+        <div class="row bg-light mt-0" id="slot">
+          <div class="col-1 time hour" id="onePm">1pm</div>
           <div class="todo col-10"></div>
-          <div class="col-1 pt-4 pl-5 save-btn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
+          <div class="col-1 pt-4 pl-5 saveBtn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
         </div>
-        <div class="row border-top bg-light mt-0" id="slot">
-          <div class="col-1 time" id="threePm">3pm</div>
+        <div class="row bg-light mt-0" id="slot">
+          <div class="col-1 time hour" id="twoPm">2pm</div>
           <div class="todo col-10"></div>
-          <div class="col-1 pt-4 pl-5 save-btn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
+          <div class="col-1 pt-4 pl-5 saveBtn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
         </div>
-        <div class="row border-top bg-light mt-0" id="slot">
-          <div class="col-1 time" id="fourPm">4pm</div>
+        <div class="row bg-light mt-0" id="slot">
+          <div class="col-1 time hour" id="threePm">3pm</div>
           <div class="todo col-10"></div>
-          <div class="col-1 pt-4 pl-5 save-btn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
+          <div class="col-1 pt-4 pl-5 saveBtn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
         </div>
-        <div class="row border-top bg-light mt-0" id="slot">
-          <div class="col-1 time" id="fivePm">5pm</div>
+        <div class="row bg-light mt-0" id="slot">
+          <div class="col-1 time hour" id="fourPm">4pm</div>
           <div class="todo col-10"></div>
-          <div class="col-1 pt-4 pl-5 save-btn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
+          <div class="col-1 pt-4 pl-5 saveBtn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
         </div>
-        <div class="row border-top bg-light mt-0" id="slot">
-          <div class="col-1 time" id="sixPm">6pm</div>
+        <div class="row bg-light mt-0" id="slot">
+          <div class="col-1 time hour" id="fivePm">5pm</div>
           <div class="todo col-10"></div>
-          <div class="col-1 pt-4 pl-5 save-btn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
+          <div class="col-1 pt-4 pl-5 saveBtn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
+        </div>
+        <div class="row bg-light mt-0" id="slot">
+          <div class="col-1 time hour" id="sixPm">6pm</div>
+          <div class="todo col-10"></div>
+          <div class="col-1 pt-4 pl-5 saveBtn"><img src="./assets/imgs/lock.svg" height="20px" alt="save icon"></div>
         </div>
       </div>
-      <div class="col-1 mt-0"></div>
-    </div>
-  </div>
+    <div class="col-1 mt-0"></div>
   </div>
 
-  </div>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script src="./assets/js/script.js"
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

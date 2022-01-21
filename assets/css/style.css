@@ -10,7 +10,7 @@ body {
     white-space: nowrap;
   }
   
-  textarea{
+  .textarea{
     background: transparent;
     border: none;
     resize: none;
