@@ -1,27 +1,31 @@
 
 //make tasks
-$(".todo").click(function() {
+$(".todo").click(function () {
     var write = $("<textarea>").addClass("textarea").addClass("toDoMade").val("").wrapInner("p");
     $(this).append(write);
     write.trigger("focus");
     $(this).siblings(".saveBtn").addClass("bg-danger");
 });
 
+
+
 //edit tasks
-$(".toDoMade").click(function() {
-    var write = $("<textarea>").addClass("textarea").addClass("toDoMade").val("").wrapInner("p");
+$(".toDoMade").click(function () {
+    var write = $("<textarea>").addClass("toDoMade").val("").wrapInner("p");
     $(this).replaceWith(write);
     write.trigger("focus");
     $(this).siblings(".saveBtn").addClass("bg-danger");
 });
 
 //save tasks
-$(".saveBtn").click(function() {
+$(".saveBtn").click(function () {
     $(this).removeClass("bg-danger");
-    var schedTime = $(this).siblings(".time").id;
-    var schedItems = $(this).siblings(".todo").children(".toDoMade").val();
+    var hourItems = $(this).siblings(".todo").children(".toDoMade").length;
+    var schedTime = $(this).siblings(".hour").text();
+    var schedItems = $(this).siblings(".todo").children(".toDoMade").each.val();
     var schedHour = [schedTime, schedItems];
     localStorage.setItem("oldSched", JSON.stringify(schedHour));
+
 });
 
 //retrieve oldSched and put it on the slate
