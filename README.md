@@ -15,3 +15,5 @@ Per the client's request and styling, the non-functional title at the top is hug
 
 ## So Done ##
 Upon clicking on the time slots, the user can enter tasks to do for the day, which will be saved to local storage, in case they refresh the page. I am hoping that the client likes it. 
+
+https://becketbowes.github.io/calendater/
