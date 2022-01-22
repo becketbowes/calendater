@@ -1,4 +1,4 @@
-var setStorage = function() {
+var setStorage = function () {
     var wholeSched = [["5am", "wakeup"]];
     localStorage.setItem("oldSched", JSON.stringify(wholeSched));
 };
@@ -18,13 +18,12 @@ moment().date();
 moment().month();
 moment().year();
 var hour = moment().format("ha");
-var funkHour = (hour-6)
-console.log(hour)
+var funkHour = (hour - 6)
 
 // loop through with if elseif else "hour" to change class
-var colorator = function() {
+var colorator = function () {
     var flag = false;
-    $(".todo").each(function() {
+    $(".todo").each(function () {
         if (flag === false) {
             $(this).addClass("past");
         };
@@ -37,9 +36,10 @@ var colorator = function() {
             $(this).addClass("present");
             flag = true;
         };
-    })
+    });
 };
 
+//set date at top of page
 var date = moment().format("dddd, MMMM Do, YYYY");
 $(".currentDay").text(date);
 
@@ -66,11 +66,9 @@ $(".todo").click(function () {
     $(this).siblings(".saveBtn").addClass("bg-danger");
 });
 
-//TODO use place 
 //save tasks
 $(".saveBtn").click(function () {
     $(this).removeClass("bg-danger");
-    // var hourItems = $(this).siblings(".todo").children(".toDoMade").length;
     var schedTime = $(this).siblings(".hour").text();
     var schedItems = $(this).siblings(".todo").children(".toDoMade").val();
     wholeSched[schedNum] = [schedTime, schedItems];
@@ -80,4 +78,3 @@ $(".saveBtn").click(function () {
 
 colorator();
 replaceTasks();
-

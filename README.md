@@ -6,6 +6,7 @@ So, per the client's Tastes, we had a style sheet. With, um, Colors. That we imp
 
 Also per client's Taste, which i am resolutely not putting in quotation marks, we are using JQuery, MomentJS, and Bootstrap. Which the client likes. They don't think that Bootstrap is to the teens what shoulder pads were to the late 80s. They don't think that jQuery is like putting galoshes over perfectly nice shoes while wearing a nice outfit and then pretending that nothing is wrong. And, the client has no issue with the fact that Moment JS's own website practically begs you to use anything else. So these are all cool. Because of the client's Tastes. Which i am capitalizing, because, honestly. 
 
+[calendaterReadme1](becketbowes/readmeimg/calendaterReadme1.png)
 Per the client's request and styling, the non-functional title at the top is huge, typographically dripping over a vague description of the functionality. In the same font-size and -weight as the description is today's date. In the font of the client's choosing. 
 
 Upon clicking on the time slots, the user can enter tasks to do for the day, which will be saved to local storage, in case they refresh the page. I am hoping that the client likes it. 
